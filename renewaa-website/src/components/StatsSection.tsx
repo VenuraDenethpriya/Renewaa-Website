@@ -1,7 +1,7 @@
 "use client"
 
 import { CLEAN_ENERGY, CUSTOMERS_COUNT, PROJECTS_COUNT, YEARS_EXPERIENCE } from "@/lib/const"
-import { Archive, Award, Package, Smile, Sun, Trophy, UserCheck, Zap } from "lucide-react"
+import { Archive, Smile, Sun, UserCheck } from "lucide-react"
 import { useEffect, useState } from "react"
 
 export default function StatsSection() {

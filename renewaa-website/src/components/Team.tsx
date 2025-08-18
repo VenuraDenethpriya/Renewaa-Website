@@ -4,6 +4,7 @@ import { useState, useRef } from "react"
 import { Card } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { founders, teamMembers } from "@/lib/team"
+import Image from "next/image"
 
 
 
@@ -67,7 +68,7 @@ export default function Team() {
                 <div className="p-6 text-center">
                   <div className="relative mb-6">
                     <div className="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-blue-400/30 group-hover:ring-blue-400/60 transition-all duration-300">
-                      <img
+                      <Image
                         src={member.image || "C:\Renewaa Project\Website\renewaa-website\public\placeholder.jpeg"}
                         alt={member.name}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -120,7 +121,7 @@ export default function Team() {
                     <div className="p-4 text-center">
                       <div className="relative mb-4">
                         <div className="w-20 h-20 mx-auto rounded-full overflow-hidden ring-2 ring-blue-400/30 group-hover:ring-blue-400/60 transition-all duration-300">
-                          <img
+                          <Image
                             src={member.image || "/placeholder.svg"}
                             alt={member.name}
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
@@ -132,7 +133,7 @@ export default function Team() {
                       </div>
                       <h4 className="text-lg font-semibold text-white mb-1">{member.name}</h4>
                       <p className="text-blue-400 text-sm font-medium mb-1">{member.position}</p>
-                      <p className="text-slate-400 text-xs">{member.team}</p>
+                      {/* <p className="text-slate-400 text-xs">{member.team}</p> */}
                     </div>
                   </Card>
                 ))}

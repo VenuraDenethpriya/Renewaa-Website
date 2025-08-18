@@ -31,7 +31,7 @@ export default function Portfolio() {
                             Innovation in Action
                         </h2>
                         <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
-                            Transforming industries with breakthrough energy solutions that redefine what's possible.
+                            Transforming industries with breakthrough energy solutions that redefine what&apos;s possible.
                         </p>
                     </div>
 
