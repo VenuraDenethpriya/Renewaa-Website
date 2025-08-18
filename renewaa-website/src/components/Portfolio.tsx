@@ -6,6 +6,7 @@ import { ExternalLink, MapPin, Zap } from "lucide-react"
 import ProjectDetail from "./Project-Detail"
 import { useState } from "react"
 import { projects } from "@/lib/projects"
+import Image from "next/image"
 
 export default function Portfolio() {
     const [selectedProject, setSelectedProject] = useState<any>(null)
@@ -42,7 +43,7 @@ export default function Portfolio() {
                             >
                                 {/* Project Image */}
                                 <div className="relative h-48 overflow-hidden">
-                                    <img
+                                    <Image
                                         src={project.image || "/placeholder.svg"}
                                         alt={project.title}
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

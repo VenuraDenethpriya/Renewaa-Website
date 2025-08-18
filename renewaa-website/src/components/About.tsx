@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { CLEAN_ENERGY, CUSTOMERS_COUNT, PROJECTS_COUNT, YEARS_EXPERIENCE } from "@/lib/const"
 import { CheckCircle, Award, Users, Leaf, Target, Shield } from "lucide-react"
+import Image from "next/image"
 
 export default function About() {
   const stats = [
@@ -113,7 +114,7 @@ export default function About() {
             {/* Hero Image */}
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl">
-                <img
+                <Image
                   src="/placeholder.svg?height=400&width=600"
                   alt="Renewaa team installing solar panels"
                   className="w-full h-80 object-cover"

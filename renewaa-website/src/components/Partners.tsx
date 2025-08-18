@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 export default function Partners() {
   const partners = [
     { name: "Tesla Energy", logo: "/placeholder.svg?height=60&width=120" },
@@ -36,7 +38,7 @@ export default function Partners() {
                   key={index}
                   className="flex items-center justify-center p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-blue-500/20 hover:bg-white/20 transition-all duration-300 min-w-[160px] h-20"
                 >
-                  <img
+                  <Image
                     src={partner.logo || "/placeholder.svg"}
                     alt={partner.name}
                     className="max-h-12 max-w-28 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
@@ -52,7 +54,7 @@ export default function Partners() {
                   key={`duplicate-${index}`}
                   className="flex items-center justify-center p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-blue-500/20 hover:bg-white/20 transition-all duration-300 min-w-[160px] h-20"
                 >
-                  <img
+                  <Image
                     src={partner.logo || "/placeholder.svg"}
                     alt={partner.name}
                     className="max-h-12 max-w-28 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
