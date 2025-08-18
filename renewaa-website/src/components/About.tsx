@@ -1,0 +1,152 @@
+import { Card, CardContent } from "@/components/ui/card"
+import { CLEAN_ENERGY, CUSTOMERS_COUNT, PROJECTS_COUNT, YEARS_EXPERIENCE } from "@/lib/const"
+import { CheckCircle, Award, Users, Leaf, Target, Shield } from "lucide-react"
+
+export default function About() {
+  const stats = [
+    { icon: CheckCircle, number: PROJECTS_COUNT, label: "Projects Completed", color: "from-green-400 to-emerald-500" },
+    { icon: Users, number: CUSTOMERS_COUNT, label: "Happy Customers", color: "from-blue-400 to-cyan-500" },
+    { icon: Award, number: YEARS_EXPERIENCE, label: "Years Experience", color: "from-yellow-400 to-orange-500" },
+    { icon: Leaf, number: CLEAN_ENERGY, label: "Clean Energy Generated", color: "from-green-400 to-teal-500" },
+  ]
+
+  const values = [
+    {
+      icon: Target,
+      title: "Innovation",
+      description: "Cutting-edge technology and continuous improvement in solar solutions.",
+    },
+    {
+      icon: Shield,
+      title: "Reliability",
+      description: "Dependable systems with comprehensive warranties and support.",
+    },
+    {
+      icon: Leaf,
+      title: "Sustainability",
+      description: "Committed to environmental protection and renewable energy adoption.",
+    },
+  ]
+
+  return (
+    <section
+      id="about"
+      className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-blue-800 relative overflow-hidden"
+    >
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] opacity-5"></div>
+      <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-20 w-56 h-56 bg-gradient-to-r from-blue-400/10 to-blue-600/10 rounded-full blur-2xl"></div>
+
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          {/* Left Content */}
+          <div className="space-y-8">
+            <div>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-md border border-blue-400/30 mb-6">
+                <span className="text-blue-200 text-sm font-medium">🏢 About Renewaa</span>
+              </div>
+
+              <h2 className="text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent mb-8">
+                Who We Are ?
+              </h2>
+
+              <div className="space-y-6 text-lg text-blue-100 leading-relaxed">
+                <p>
+                  Renewaa Private Limited is a leading provider of advanced, sustainable energy solutions,
+                  committed to shaping a greener future. While we initially pioneered cutting-edge lithium
+                  battery technology, our expertise now spans a wide range of renewable energy systems.
+                </p>
+                <p>
+                  We specialize in solar on-grid, off-grid, and hybrid solutions, as well as wind power
+                  systems, designed to deliver reliable, efficient, and environmentally-friendly energy
+                  alternatives.
+                </p>
+              </div>
+            </div>
+
+            {/* Company Values */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-white">Our Core Values</h3>
+              <div className="grid gap-4">
+                {values.map((value, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start space-x-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
+                  >
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <value.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-2">{value.title}</h4>
+                      <p className="text-blue-200 text-sm">{value.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Why Choose Us */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold text-white">Why Choose Renewaa?</h3>
+              <ul className="space-y-3">
+                {[
+                  "Premium quality solar panels with 25-year warranty",
+                  "Advanced lithium battery technology",
+                  "Professional installation and ongoing support",
+                  "Competitive pricing and flexible financing options",
+                  "Certified and experienced technicians",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center space-x-3 group">
+                    <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <CheckCircle className="h-4 w-4 text-white" />
+                    </div>
+                    <span className="text-blue-100 group-hover:text-white transition-colors">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Right Content - Stats and Image */}
+          <div className="space-y-8">
+            {/* Hero Image */}
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-2xl">
+                <img
+                  src="/placeholder.svg?height=400&width=600"
+                  alt="Renewaa team installing solar panels"
+                  className="w-full h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
+              </div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-2xl blur opacity-60"></div>
+            </div>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-6">
+              {stats.map((stat, index) => (
+                <Card
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 p-6"
+                >
+                  <CardContent className="text-center space-y-4 p-0">
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-2xl flex items-center justify-center mx-auto shadow-2xl group-hover:shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300`}
+                    >
+                      <stat.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="text-4xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                      {stat.number}
+                    </div>
+                    <div className="text-blue-200 font-medium">{stat.label}</div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
