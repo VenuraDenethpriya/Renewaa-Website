@@ -30,7 +30,7 @@ export default function Footer() {
                       </span> */}
             </div>
             <p className="text-blue-200 leading-relaxed">
-              Pioneering the future of energy with revolutionary lithium battery solutions and solar systems that power tomorrow's world.
+              Pioneering the future of energy with revolutionary lithium battery solutions and solar systems that power tomorrow&apos;s world.
             </p>
             <div className="flex space-x-4">
               {[

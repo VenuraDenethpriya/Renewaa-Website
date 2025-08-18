@@ -74,7 +74,7 @@ export default function Contact() {
             <span className="text-blue-200 text-sm font-medium">📞 Get In Touch</span>
           </div>
           <h2 className="text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent mb-6">
-            Let's Build the Future
+            Let&apos;s Build the Future
           </h2>
           <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
             Ready to revolutionize your energy infrastructure? Our experts are standing by to craft your perfect solution.
@@ -279,7 +279,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-white mb-2 text-lg">Email Us</h3>
                     <p className="text-blue-200 text-lg font-medium">info@renewaa.com</p>
-                    <p className="text-blue-300 text-sm">We'll respond within 24 hours</p>
+                    <p className="text-blue-300 text-sm">We&apos;ll respond within 24 hours</p>
                   </div>
                 </div>
               </CardContent>

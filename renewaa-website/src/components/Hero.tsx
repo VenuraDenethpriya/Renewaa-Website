@@ -76,7 +76,7 @@ export default function Hero() {
               </h1>
 
               <p className="text-xl text-blue-100 leading-relaxed max-w-2xl">
-                Revolutionary lithium battery solutions and solar systems engineered for tomorrow's energy demands.
+                Revolutionary lithium battery solutions and solar systems engineered for tomorrow&apos;s energy demands.
               </p>
             </div>
 
