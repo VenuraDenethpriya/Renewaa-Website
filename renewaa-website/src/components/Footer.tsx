@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 import Image from "next/image"
 import { FaTiktok } from "react-icons/fa"
 

@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Phone, Mail, Play } from "lucide-react"
+import { ArrowRight, Phone, Mail } from "lucide-react"
 import StatsSection from "./StatsSection"
 import Carousel from "./ui/carousel"
 import Link from "next/link"
