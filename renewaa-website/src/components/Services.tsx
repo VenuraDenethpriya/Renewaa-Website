@@ -9,7 +9,7 @@ import { services } from "@/lib/services"
 import Image from "next/image"
 
 export default function Services() {
-  const [selectedProduct, setSelectedProduct] = useState<unknown>(null)
+  const [selectedProduct, setSelectedProduct] = useState<any>(null)
 
   return (
     <>
