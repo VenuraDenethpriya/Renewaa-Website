@@ -6,6 +6,12 @@ import Image from "next/image";
 import MobileNav from "./Mobile-Navigation";
 
 export default function Navigation() {
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "+94743020154"
+    const message = "Hello! I would like to get quote for my requirements."
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, "_blank")
+  }
   return (
     <>
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-slate-900 to-blue-800"></div>
@@ -61,7 +67,7 @@ export default function Navigation() {
           <a href="#contact" className="text-blue-100 hover:text-white transition-all duration-300 hover:scale-105">
             Contact
           </a>
-          <Button className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-500 hover:to-blue-700 shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 border border-blue-400/20">
+          <Button onClick={handleWhatsAppClick} className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-500 hover:to-blue-700 shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 border border-blue-400/20">
             Get Quote
           </Button>
         </div>

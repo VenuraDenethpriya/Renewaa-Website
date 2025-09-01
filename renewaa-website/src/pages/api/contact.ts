@@ -6,7 +6,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const scriptUrl = "https://script.google.com/macros/s/AKfycbwRnwf59J2rLJJOZ8OTI_PBO_ESUshUt5fhuwdR08XdKRDgyFY5TERghMp-Co6PLKaXtQ/exec";
+    const scriptUrl = process.env.WEB_APP_URL;
+
+    if (!scriptUrl) {
+      throw new Error("WEB_APP_URL is not defined in .env.local");
+    }
 
     const response = await fetch(scriptUrl, {
       method: "POST",

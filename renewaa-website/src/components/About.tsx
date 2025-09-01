@@ -118,6 +118,8 @@ export default function About() {
                   src="/placeholder.svg?height=400&width=600"
                   alt="Renewaa team installing solar panels"
                   className="w-full h-80 object-cover"
+                  width={600}
+                  height={400}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
               </div>

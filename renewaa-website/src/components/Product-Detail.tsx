@@ -2,8 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { X, Check, Star, Zap, Shield, Clock, Award } from "lucide-react"
-import Image from "next/image"
+import { X, Check, Star, ArrowRight, Zap, Shield, Clock, Award } from "lucide-react"
 
 interface ProductDetailProps {
   product: {
@@ -62,7 +61,7 @@ export default function ProductDetail({ product, isOpen, onClose }: ProductDetai
           {/* Left Column - Image and Description */}
           <div className="space-y-6">
             <div className="relative h-64 rounded-xl overflow-hidden">
-              <Image
+              <img
                 src={product.image || "/placeholder.svg"}
                 alt={product.title}
                 className="w-full h-full object-cover"

@@ -6,36 +6,9 @@ import StatsSection from "./StatsSection"
 import Carousel from "./ui/carousel"
 import Link from "next/link"
 import Partners from "./Partners"
+import { slides } from "@/lib/hero"
 
 export default function Hero() {
-  const slides = [
-    {
-      title: "Solar Panel Installation",
-      button: "Learn More",
-      src: "/placeholder.svg?height=300&width=400",
-    },
-    {
-      title: "Lithium Battery Solutions",
-      button: "Learn More",
-      src: "/placeholder.svg?height=300&width=400",
-    },
-    {
-      title: "Residential Solar",
-      button: "Learn More",
-      src: "/placeholder.svg?height=300&width=400",
-    },
-    {
-      title: "Commercial Solar",
-      button: "Learn More",
-      src: "/placeholder.svg?height=300&width=400",
-    },
-    {
-      title: "Maintenance & Support",
-      button: "Learn More",
-      src: "/placeholder.svg?height=300&width=400",
-    }
-  ]
-
   return (
     <section id="hero" className="relative min-h-screen overflow-hidden">
       {/* Background with blur effects */}

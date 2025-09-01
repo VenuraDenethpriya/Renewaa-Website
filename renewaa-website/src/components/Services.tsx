@@ -1,12 +1,11 @@
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight} from "lucide-react"
+import { Battery, Sun, Building, ArrowRight, Car, Bike, Forklift } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import ProductDetail from "./Product-Detail"
 import { services } from "@/lib/services"
-import Image from "next/image"
 
 export default function Services() {
   const [selectedProduct, setSelectedProduct] = useState<any>(null)
@@ -43,7 +42,7 @@ export default function Services() {
               >
                 {/* Service Image */}
                 <div className="relative h-48 overflow-hidden">
-                  <Image
+                  <img
                     src={service.image || "/placeholder.svg"}
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

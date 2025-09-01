@@ -4,16 +4,21 @@ import Image from "next/image"
 
 export default function Partners() {
   const partners = [
-    { name: "Tesla Energy", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "SolarCity", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Panasonic", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "LG Chem", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "BYD", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "CATL", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Enphase", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "SolarEdge", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Fronius", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Huawei", logo: "/placeholder.svg?height=60&width=120" },
+    { name: "CTC", logo: "/partners/CTC.png" },
+    { name: "DCSL LANKA", logo: "/partners/DCSL LANKA.png" },
+    { name: "DEEP TECH", logo: "/partners/DEEP TECH.png" },
+    { name: "DESO", logo: "/partners/DESO.png" },
+    { name: "FERENTINO", logo: "/partners/FERENTINO.png" },
+    { name: "FIRE x", logo: "/partners/FIRE x.png" },
+    { name: "Global GIS", logo: "/partners/Global GIS.png" },
+    { name: "GRI", logo: "/partners/GRI.png" },
+    { name: "IDEAL LANKA", logo: "/partners/IDEAL LANKA.png" },
+    { name: "JITI", logo: "/partners/JITI.png" },
+    { name: "Laughfs", logo: "/partners/laughfs-.png" },
+    { name: "OREL", logo: "/partners/OREL.png" },
+    { name: "PON", logo: "/partners/PON.png" },
+    { name: "ROYAL COLOMBO GOLF CLUB", logo: "/partners/ROYAL COLOMBO GOLF CLUB.png" },
+    { name: "Windforce", logo: "/partners/windforce.png" },
   ]
 
   return (
@@ -39,9 +44,11 @@ export default function Partners() {
                   className="flex items-center justify-center p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-blue-500/20 hover:bg-white/20 transition-all duration-300 min-w-[160px] h-20"
                 >
                   <Image
-                    src={partner.logo || "/placeholder.svg"}
+                    src={partner.logo || "/partners/partner-placeholder.jpg"}
                     alt={partner.name}
-                    className="max-h-12 max-w-28 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    width={120}
+                    height={60}
+                    className="max-h-12 max-w-28"
                   />
                 </div>
               ))}
@@ -55,8 +62,10 @@ export default function Partners() {
                   className="flex items-center justify-center p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-blue-500/20 hover:bg-white/20 transition-all duration-300 min-w-[160px] h-20"
                 >
                   <Image
-                    src={partner.logo || "/placeholder.svg"}
+                    src={partner.logo || "/partners/partner-placeholder.jpg"}
                     alt={partner.name}
+                    width={120}
+                    height={60}
                     className="max-h-12 max-w-28 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>

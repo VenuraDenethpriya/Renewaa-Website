@@ -1,4 +1,4 @@
-
+import { X, MapPin, Zap, Calendar, Users, DollarSign, Leaf } from "lucide-react"
 export const projects = [
     {
         title: "Forklift Battery Conversion",
