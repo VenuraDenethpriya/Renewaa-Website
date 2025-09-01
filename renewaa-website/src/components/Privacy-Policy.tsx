@@ -6,7 +6,7 @@ import { X } from "lucide-react"
 
 
 
-export default function PrivacyPolicy({ isOpen, onClose }: unknown) {
+export default function PrivacyPolicy({ isOpen, onClose }: any) {
   if (!isOpen) return null
 
 
