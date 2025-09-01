@@ -2,8 +2,9 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { X, MapPin, Zap, Calendar, Users, DollarSign, Leaf, ArrowRight } from "lucide-react"
+import { X, MapPin, Zap, Calendar, Users, DollarSign, Leaf } from "lucide-react"
 import { projectPhases } from "@/lib/projects"
+import Image from "next/image"
 
 interface ProjectDetailProps {
   project: {
@@ -84,7 +85,7 @@ export default function ProjectDetail({ project, isOpen, onClose }: ProjectDetai
         <div className="p-6 space-y-8">
           {/* Project Image */}
           <div className="relative h-80 rounded-xl overflow-hidden">
-            <img src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-full object-cover" />
+            <Image src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
             <div className="absolute bottom-6 left-6 right-6">
               <p className="text-white text-lg leading-relaxed">{project.description}</p>
