@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { X, Check, Star, ArrowRight, Zap, Shield, Clock, Award } from "lucide-react"
+import { X } from "lucide-react"
 
 
 

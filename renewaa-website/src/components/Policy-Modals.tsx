@@ -88,7 +88,7 @@ export function PolicyModal({ isOpen, onClose, type }: PolicyModalProps) {
                             <section>
                                 <h3 className="text-xl font-semibold text-white mb-3">Updates to This Policy</h3>
                                 <p className="text-blue-200 leading-relaxed">
-                                    We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Revised" date.
+                                    We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated &quot;Last Revised&quot; date.
                                 </p>
                             </section>
                         </div>
