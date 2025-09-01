@@ -9,7 +9,7 @@ import { projects } from "@/lib/projects"
 import Image from "next/image"
 
 export default function Portfolio() {
-    const [selectedProject, setSelectedProject] = useState<any>(null)
+    const [selectedProject, setSelectedProject] = useState<unknown>(null)
 
     return (
         <>

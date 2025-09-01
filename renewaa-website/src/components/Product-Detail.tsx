@@ -6,7 +6,7 @@ import { X, Check, Star, Zap, Shield, Clock, Award } from "lucide-react"
 
 interface ProductDetailProps {
   product: {
-    icon: any
+    icon: unknown
     title: string
     description: string
     image: string
