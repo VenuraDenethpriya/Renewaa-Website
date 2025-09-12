@@ -3,7 +3,6 @@ import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Image from "next/image";
 import { useState, useRef, useId, useEffect } from "react";
 import ProductDetail from "../Product-Detail";
-import Image from "next/image";
 
 interface SlideData {
   title: string;
