@@ -10,12 +10,32 @@ interface ProductDetailProps {
     icon: any
     title: string
     description: string
+    overview: string
     image: string
     features: string[]
     price?: string
+    // Specifications:string[]
+    mounting?: string
+    battery_type?: string
+    voltage_capacity?: string
+    protection?: string
+    technology?: string
+    current?: string
+    lifespan?: string
+    charging?: string
+    range?: string
     warranty?: string
-    efficiency?: string
-    installation?: string
+    monitoring?: string
+    compatibility?: string
+    applications?: string
+    ongrid_systems?: string
+    Off_grid_systems?: string
+    hybrid_systems?: string
+    bespoke_battery_design?: string
+    wireless_bms?: string
+    ev_charging_solutions?: string
+    smart_tech_platforms?: string
+
   }
   isOpen: boolean
   onClose: () => void
@@ -25,10 +45,27 @@ export default function ProductDetail({ product, isOpen, onClose }: ProductDetai
   if (!isOpen) return null
 
   const specifications = [
-    { icon: Zap, label: "Efficiency", value: product.efficiency || "22.5%" },
-    { icon: Shield, label: "Warranty", value: product.warranty || "25 years" },
-    { icon: Clock, label: "Installation", value: product.installation || "1-2 days" },
-    { icon: Award, label: "Certification", value: "IEC 61215, IEC 61730" },
+    { icon: Zap, label: "Mounting", value: product.mounting },
+    { icon: Shield, label: "Battery Type", value: product.battery_type },
+    { icon: Clock, label: "Voltage & Capacity", value: product.voltage_capacity },
+    { icon: Award, label: "Protection", value: product.protection },
+    { icon: Zap, label: "Technology", value: product.technology },
+    { icon: Shield, label: "Current", value: product.current },
+    { icon: Clock, label: "Lifespan", value: product.lifespan },
+    { icon: Award, label: "Charging", value: product.charging },
+    { icon: Clock, label: "Range", value: product.range },
+    { icon: Clock, label: "Warranty", value: product.warranty },
+    { icon: Award, label: "Monitoring", value: product.monitoring },
+    { icon: Clock, label: "Compatibility", value: product.compatibility },
+    { icon: Clock, label: "Applications", value: product.applications },
+    { icon: Award, label: "On-Grid Systems", value: product.ongrid_systems },
+    { icon: Clock, label: "Off-Grid Systems", value: product.Off_grid_systems },
+    { icon: Clock, label: "Hybrid Systems", value: product.hybrid_systems },
+    { icon: Clock, label: "Applications", value: product.bespoke_battery_design },
+    { icon: Award, label: "On-Grid Systems", value: product.wireless_bms },
+    { icon: Clock, label: "Off-Grid Systems", value: product.ev_charging_solutions },
+    { icon: Clock, label: "Hybrid Systems", value: product.smart_tech_platforms },
+
   ]
 
   return (
@@ -77,17 +114,9 @@ export default function ProductDetail({ product, isOpen, onClose }: ProductDetai
               <CardContent>
                 <p className="text-blue-200 leading-relaxed mb-4">{product.description}</p>
                 <p className="text-blue-200 leading-relaxed">
-                  Our advanced solar technology delivers exceptional performance and reliability, backed by
-                  industry-leading warranties and professional installation services.
+                  {product.overview}
                 </p>
-                <p className="text-blue-200 leading-relaxed">
-                  Our advanced solar technology delivers exceptional performance and reliability, backed by
-                  industry-leading warranties and professional installation services.
-                </p>
-                <p className="text-blue-200 leading-relaxed">
-                  Our advanced solar technology delivers exceptional performance and reliability, backed by
-                  industry-leading warranties and professional installation services.
-                </p>
+
               </CardContent>
             </Card>
           </div>
@@ -101,17 +130,23 @@ export default function ProductDetail({ product, isOpen, onClose }: ProductDetai
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
-                  {specifications.map((spec, index) => (
-                    <div key={index} className="flex items-center space-x-3 p-3 bg-blue-500/10 rounded-lg">
-                      <spec.icon className="h-5 w-5 text-blue-400" />
-                      <div>
-                        <p className="text-blue-200 text-sm">{spec.label}</p>
-                        <p className="text-white font-medium">{spec.value}</p>
+                  {specifications
+                    .filter((spec) => spec.value && spec.value.trim() !== "")
+                    .map((spec, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center space-x-3 p-3 bg-blue-500/10 rounded-lg"
+                      >
+                        <spec.icon className="h-5 w-5 text-blue-400" />
+                        <div>
+                          <p className="text-blue-200 text-sm">{spec.label}</p>
+                          <p className="text-white font-medium">{spec.value}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
                 </div>
               </CardContent>
+
             </Card>
 
             {/* Features */}

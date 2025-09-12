@@ -1,33 +1,48 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { CLEAN_ENERGY, CUSTOMERS_COUNT, PROJECTS_COUNT, YEARS_EXPERIENCE } from "@/lib/const"
-import { CheckCircle, Award, Users, Leaf, Target, Shield } from "lucide-react"
+import { stats, values } from "@/lib/about-us"
+import { CheckCircle } from "lucide-react"
 import Image from "next/image"
 
 export default function About() {
-  const stats = [
-    { icon: CheckCircle, number: PROJECTS_COUNT, label: "Projects Completed", color: "from-green-400 to-emerald-500" },
-    { icon: Users, number: CUSTOMERS_COUNT, label: "Happy Customers", color: "from-blue-400 to-cyan-500" },
-    { icon: Award, number: YEARS_EXPERIENCE, label: "Years Experience", color: "from-yellow-400 to-orange-500" },
-    { icon: Leaf, number: CLEAN_ENERGY, label: "Clean Energy Generated", color: "from-green-400 to-teal-500" },
-  ]
+  // const stats = [
+  //   { icon: CheckCircle, number: PROJECTS_COUNT, label: "Projects Completed", color: "from-green-400 to-emerald-500" },
+  //   { icon: Users, number: CUSTOMERS_COUNT, label: "Happy Customers", color: "from-blue-400 to-cyan-500" },
+  //   { icon: Award, number: YEARS_EXPERIENCE, label: "Years Experience", color: "from-yellow-400 to-orange-500" },
+  //   { icon: Leaf, number: CLEAN_ENERGY, label: "Clean Energy Generated", color: "from-green-400 to-teal-500" },
+  // ]
 
-  const values = [
-    {
-      icon: Target,
-      title: "Innovation",
-      description: "Cutting-edge technology and continuous improvement in solar solutions.",
-    },
-    {
-      icon: Shield,
-      title: "Reliability",
-      description: "Dependable systems with comprehensive warranties and support.",
-    },
-    {
-      icon: Leaf,
-      title: "Sustainability",
-      description: "Committed to environmental protection and renewable energy adoption.",
-    },
-  ]
+  // const values = [
+  //   {
+  //     icon: Target,
+  //     title: "Innovation",
+  //     description: "Constantly pushing the boundaries of renewable energy and battery technology to deliver cutting-edge solutions.",
+  //   },
+  //   {
+  //     icon: Shield,
+  //     title: "Sustainability",
+  //     description: "Committed to reducing environmental impact by promoting clean and renewable energy alternatives.",
+  //   },
+  //   {
+  //     icon: Leaf,
+  //     title: "Quality",
+  //     description: "Delivering durable, high-performance products backed by comprehensive warranties and trusted reliability.",
+  //   },
+  //   {
+  //     icon: Target,
+  //     title: "Customer-Centricity",
+  //     description: "Building strong relationships through personalized solutions, exceptional service, and after-sales support.",
+  //   },
+  //   {
+  //     icon: Shield,
+  //     title: "Integrity",
+  //     description: "Operating with transparency, accountability, and trust in every project and partnership.",
+  //   },
+  //   {
+  //     icon: Leaf,
+  //     title: "Collaboration",
+  //     description: "Partnering with clients, industries, and communities to create impactful and future-ready energy solutions.",
+  //   },
+  // ]
 
   return (
     <section
@@ -40,7 +55,7 @@ export default function About() {
       <div className="absolute bottom-20 right-20 w-56 h-56 bg-gradient-to-r from-blue-400/10 to-blue-600/10 rounded-full blur-2xl"></div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-20 ">
           {/* Left Content */}
           <div className="space-y-8">
             <div>
@@ -54,38 +69,40 @@ export default function About() {
 
               <div className="space-y-6 text-lg text-blue-100 leading-relaxed">
                 <p>
-                  Renewaa Private Limited is a leading provider of advanced, sustainable energy solutions,
-                  committed to shaping a greener future. While we initially pioneered cutting-edge lithium
-                  battery technology, our expertise now spans a wide range of renewable energy systems.
+                  Renewaa Private Limited is a leading provider of sustainable energy solutions, dedicated to shaping a cleaner
+                  and greener future. With expertise in lithium battery technology, solar systems, EV battery upgrades, and
+                  custom engineering, we deliver innovative and reliable energy solutions for homes, businesses, and industries.
                 </p>
                 <p>
-                  We specialize in solar on-grid, off-grid, and hybrid solutions, as well as wind power
-                  systems, designed to deliver reliable, efficient, and environmentally-friendly energy
-                  alternatives.
+                  Our focus on quality, performance, and sustainability ensures that every project we undertake contributes to
+                  reducing carbon footprints and empowering individuals and organizations with energy independence.
                 </p>
               </div>
             </div>
 
-            {/* Company Values */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-white">Our Core Values</h3>
-              <div className="grid gap-4">
-                {values.map((value, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start space-x-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <value.icon className="h-6 w-6 text-white" />
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-6">
+              {stats.map((stat, index) => (
+                <Card
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 p-6"
+                >
+                  <CardContent className="text-center space-y-4 p-0">
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-2xl flex items-center justify-center mx-auto shadow-2xl group-hover:shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300`}
+                    >
+                      <stat.icon className="h-8 w-8 text-white" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-white mb-2">{value.title}</h4>
-                      <p className="text-blue-200 text-sm">{value.description}</p>
+                    <div className="text-4xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                      {stat.number}
                     </div>
-                  </div>
-                ))}
-              </div>
+                    <div className="text-blue-200 font-medium">{stat.label}</div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
+
+
 
             {/* Why Choose Us */}
             <div className="space-y-4">
@@ -126,27 +143,27 @@ export default function About() {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-2xl blur opacity-60"></div>
             </div>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => (
-                <Card
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 p-6"
-                >
-                  <CardContent className="text-center space-y-4 p-0">
-                    <div
-                      className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-2xl flex items-center justify-center mx-auto shadow-2xl group-hover:shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300`}
-                    >
-                      <stat.icon className="h-8 w-8 text-white" />
+            {/* Company Values */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-white">Our Core Values</h3>
+              <div className="grid gap-4">
+                {values.map((value, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start space-x-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
+                  >
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <value.icon className="h-6 w-6 text-white" />
                     </div>
-                    <div className="text-4xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                      {stat.number}
+                    <div>
+                      <h4 className="font-semibold text-white mb-2">{value.title}</h4>
+                      <p className="text-blue-200 text-sm">{value.description}</p>
                     </div>
-                    <div className="text-blue-200 font-medium">{stat.label}</div>
-                  </CardContent>
-                </Card>
-              ))}
+                  </div>
+                ))}
+              </div>
             </div>
+
           </div>
         </div>
       </div>
