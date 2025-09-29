@@ -153,20 +153,23 @@ export default function Contact() {
                       >
                         Select project type
                       </option>
-                      <option value="residential" className="bg-slate-800">
-                        Residential Solar
+                      <option value="LithiumBatteryPacks" className="bg-slate-800">
+                        Lithium Battery Packs
                       </option>
-                      <option value="commercial" className="bg-slate-800">
-                        Commercial Solar
+                      <option value="ForkliftsBatteryPacks" className="bg-slate-800">
+                        Forklifts Battery Packs
                       </option>
-                      <option value="battery" className="bg-slate-800">
-                        Battery Storage
+                      <option value="E-BikeBatteryPacks" className="bg-slate-800">
+                        E-Bike Battery Packs
                       </option>
-                      <option value="maintenance" className="bg-slate-800">
+                      <option value="EVBatteryUpgrades" className="bg-slate-800">
                         Maintenance
                       </option>
-                      <option value="consultation" className="bg-slate-800">
-                        Consultation
+                      <option value="SolarPowerSystems" className="bg-slate-800">
+                        Solar Power Systems
+                      </option>
+                       <option value="CustomEngineering" className="bg-slate-800">
+                        Custom Engineering
                       </option>
                     </select>
                   </div>

@@ -132,7 +132,7 @@ export default function About() {
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/aboutus/About us.jpg?height=400&width=600"
                   alt="Renewaa team installing solar panels"
                   className="w-full h-80 object-cover"
                   width={600}

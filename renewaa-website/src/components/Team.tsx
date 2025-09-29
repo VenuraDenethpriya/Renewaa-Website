@@ -133,7 +133,7 @@ export default function Team() {
                       </div>
                       <h4 className="text-lg font-semibold text-white mb-1">{member.name}</h4>
                       <p className="text-blue-400 text-sm font-medium mb-1">{member.position}</p>
-                      {/* <p className="text-slate-400 text-xs">{member.team}</p> */}
+                      <p className="text-slate-400 text-xs">{member.team}</p>
                     </div>
                   </Card>
                 ))}

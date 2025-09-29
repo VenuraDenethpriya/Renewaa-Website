@@ -44,29 +44,30 @@ interface ProductDetailProps {
 export default function ProductDetail({ product, isOpen, onClose }: ProductDetailProps) {
   if (!isOpen) return null
 
-  const specifications = [
-    { icon: Zap, label: "Mounting", value: product.mounting },
-    { icon: Shield, label: "Battery Type", value: product.battery_type },
-    { icon: Clock, label: "Voltage & Capacity", value: product.voltage_capacity },
-    { icon: Award, label: "Protection", value: product.protection },
-    { icon: Zap, label: "Technology", value: product.technology },
-    { icon: Shield, label: "Current", value: product.current },
-    { icon: Clock, label: "Lifespan", value: product.lifespan },
-    { icon: Award, label: "Charging", value: product.charging },
-    { icon: Clock, label: "Range", value: product.range },
-    { icon: Clock, label: "Warranty", value: product.warranty },
-    { icon: Award, label: "Monitoring", value: product.monitoring },
-    { icon: Clock, label: "Compatibility", value: product.compatibility },
-    { icon: Clock, label: "Applications", value: product.applications },
-    { icon: Award, label: "On-Grid Systems", value: product.ongrid_systems },
-    { icon: Clock, label: "Off-Grid Systems", value: product.Off_grid_systems },
-    { icon: Clock, label: "Hybrid Systems", value: product.hybrid_systems },
-    { icon: Clock, label: "Applications", value: product.bespoke_battery_design },
-    { icon: Award, label: "On-Grid Systems", value: product.wireless_bms },
-    { icon: Clock, label: "Off-Grid Systems", value: product.ev_charging_solutions },
-    { icon: Clock, label: "Hybrid Systems", value: product.smart_tech_platforms },
+ 
+const specifications = [
+  { icon: Settings, label: "Mounting", value: product.mounting },
+  { icon: Battery, label: "Battery Type", value: product.battery_type },
+  { icon: Gauge, label: "Voltage & Capacity", value: product.voltage_capacity },
+  { icon: Shield, label: "Protection", value: product.protection },
+  { icon: Cpu, label: "Technology", value: product.technology },
+  { icon: Activity, label: "Current", value: product.current },
+  { icon: Timer, label: "Lifespan", value: product.lifespan },
+  { icon: Plug, label: "Charging", value: product.charging },
+  { icon: RefreshCcw, label: "Range", value: product.range },
+  { icon: Award, label: "Warranty", value: product.warranty },
+  { icon: CheckCircle, label: "Monitoring", value: product.monitoring },
+  { icon: Layers, label: "Compatibility", value: product.compatibility },
+  { icon: Globe, label: "Applications", value: product.applications },
+  { icon: Network, label: "On-Grid Systems", value: product.ongrid_systems },
+  { icon: Box, label: "Off-Grid Systems", value: product.Off_grid_systems },
+  { icon: CircuitBoard, label: "Hybrid Systems", value: product.hybrid_systems },
+  { icon: Globe, label: "Bespoke Battery Design", value: product.bespoke_battery_design },
+  { icon: Radio, label: "Wireless BMS", value: product.wireless_bms },
+  { icon: Car, label: "EV Charging Solutions", value: product.ev_charging_solutions },
+  { icon: Cpu, label: "Smart Tech Platforms", value: product.smart_tech_platforms },
+];
 
-  ]
 
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">

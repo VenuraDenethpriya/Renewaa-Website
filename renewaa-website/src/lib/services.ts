@@ -22,7 +22,7 @@ export const services = [
   {
     icon: Forklift,
     title: "Forklifts Battery Packs",
-    description: "LOAD MAX — engineered for electric forklifts, delivering long-lasting power and superior performance.",
+    description: "LOAD MAX — engineered for electric forklifts, delivering long-lasting power, superior performance, and unmatched reliability.",
     overview: "LOAD MAX is a high-performance lithium battery solution specifically engineered for electric forklifts. It provides exceptional power output, longer runtime on a single charge, and superior durability compared to conventional lead-acid batteries — making it the ideal choice for warehouses, factories, and logistics operations.",
     image: "/products/Forklifts Battery Packs.jpg?height=300&width=400",
     features: [
@@ -76,7 +76,7 @@ export const services = [
   {
     icon: Sun,
     title: "Solar Power Systems",
-    description: "On-grid, off-grid, and hybrid solar solutions tailored for homes, businesses, and remote areas.",
+    description: "On-grid, off-grid, and hybrid solar solutions tailored for homes, businesses, and remote areas islandwide with reliability.",
     overview:"Renewaa provides complete solar power solutions, including On-Grid, Off-Grid, and Hybrid systems, designed to meet the energy needs of homes, businesses, and industries. Whether you want to reduce electricity costs, power remote locations, or enjoy the flexibility of hybrid systems, our solar solutions deliver reliable, sustainable, and cost-effective energy with expert installation and support.",
     image: "/products/Solar Power Systems.jpg?height=300&width=400",
     features: [

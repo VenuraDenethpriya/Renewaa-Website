@@ -75,7 +75,7 @@ export default function Portfolio() {
                                     </div>
 
                                     {/* Stats Grid */}
-                                    <div className="hidden sm:grid grid-cols-2 gap-4 text-sm">
+                                    {/* <div className="hidden sm:grid grid-cols-2 gap-4 text-sm">
                                         {Object.entries(project.stats).map(([key, value]) => (
                                             <div
                                                 key={key}
@@ -85,7 +85,7 @@ export default function Portfolio() {
                                                 <div className="text-gray-500 capitalize font-medium">{key.replace("_", " ")}</div>
                                             </div>
                                         ))}
-                                    </div>
+                                    </div> */}
 
                                     <Button
                                         variant="ghost"
