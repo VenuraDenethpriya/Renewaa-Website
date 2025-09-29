@@ -2,7 +2,14 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { X, Check, Star, Zap, Shield, Clock, Award } from "lucide-react"
+import { 
+  Zap, Shield, Clock, Award, Battery, Settings, Cpu,
+  Activity, Gauge, Timer, Plug, RefreshCcw, CheckCircle,
+  Layers, Box, Globe, Network, Radio, Car, CircuitBoard,
+  Star,
+  Check,
+  X
+} from "lucide-react";
 import Image from "next/image"
 
 interface ProductDetailProps {
