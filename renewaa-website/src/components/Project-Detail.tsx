@@ -2,9 +2,22 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { X, MapPin, Zap, Calendar, Users, DollarSign, Leaf, ArrowRight } from "lucide-react"
-import { projectPhases } from "@/lib/projects"
-import Image from "next/image"
+import { 
+  Zap,            
+  Calendar,       
+  MapPin,         
+  BatteryCharging, 
+  Wrench,         
+  Timer,           
+  Gauge,           
+  Leaf,            
+  Fuel,            
+  Cloud,           
+  PiggyBank,       
+  Tag,              
+  X
+} from "lucide-react";
+import Image from "next/image";
 
 interface ProjectDetailProps {
   project: {
@@ -42,21 +55,20 @@ export default function ProjectDetail({ project, isOpen, onClose }: ProjectDetai
   if (!isOpen) return null
 
   const projectStats = [
-    { icon: Zap, label: "System Capacity", value: project.capacity },
-    // { icon: Calendar, label: "Year", value: project.year },
-    { icon: MapPin, label: "Client", value: project.client },
-    { icon: Calendar, label: "No of ConversionsDone", value: project.NoofConversionsDone },
-    { icon: MapPin, label: "Battery Lifespan", value: project.BatteryLifespan },
-    { icon: Calendar, label: "Maintenance", value: project.Maintenance },
-    { icon: MapPin, label: "Charging Time", value: project.ChargingTime },
-    { icon: MapPin, label: "Run Time", value: project.RunTime },
-    { icon: MapPin, label: "Range", value: project.Range },
-    { icon: Calendar, label: "Trees Equivalent", value: project.TreesEquivalent },
-    { icon: MapPin, label: "Saving on Fuel", value: project.SavingOnFuel },
-    { icon: MapPin, label: "co2 Reduction", value: project.co2Reduction },
-    { icon: MapPin, label: "Saving", value: project.savings },
-    { icon: MapPin, label: "Catogory", value: project.category },
-  ]
+  { icon: Zap, label: "System Capacity", value: project.capacity },
+  { icon: MapPin, label: "Client", value: project.client },
+  { icon: Calendar, label: "No of Conversions Done", value: project.NoofConversionsDone },
+  { icon: BatteryCharging, label: "Battery Lifespan", value: project.BatteryLifespan },
+  { icon: Wrench, label: "Maintenance", value: project.Maintenance },
+  { icon: Timer, label: "Charging Time", value: project.ChargingTime },
+  { icon: Timer, label: "Run Time", value: project.RunTime },
+  { icon: Gauge, label: "Range", value: project.Range },
+  { icon: Leaf, label: "Trees Equivalent", value: project.TreesEquivalent },
+  { icon: Fuel, label: "Saving on Fuel", value: project.SavingOnFuel },
+  { icon: Cloud, label: "CO₂ Reduction", value: project.co2Reduction },
+  { icon: PiggyBank, label: "Saving", value: project.savings },
+  { icon: Tag, label: "Category", value: project.category },
+];
 
   // const projectPhases = [
   //   {
