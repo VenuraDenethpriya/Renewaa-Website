@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { 
+import {
   Zap, Shield, Clock, Award, Battery, Settings, Cpu,
   Activity, Gauge, Timer, Plug, RefreshCcw, CheckCircle,
   Layers, Box, Globe, Network, Radio, Car, CircuitBoard,
@@ -51,29 +51,29 @@ interface ProductDetailProps {
 export default function ProductDetail({ product, isOpen, onClose }: ProductDetailProps) {
   if (!isOpen) return null
 
- 
-const specifications = [
-  { icon: Settings, label: "Mounting", value: product.mounting },
-  { icon: Battery, label: "Battery Type", value: product.battery_type },
-  { icon: Gauge, label: "Voltage & Capacity", value: product.voltage_capacity },
-  { icon: Shield, label: "Protection", value: product.protection },
-  { icon: Cpu, label: "Technology", value: product.technology },
-  { icon: Activity, label: "Current", value: product.current },
-  { icon: Timer, label: "Lifespan", value: product.lifespan },
-  { icon: Plug, label: "Charging", value: product.charging },
-  { icon: RefreshCcw, label: "Range", value: product.range },
-  { icon: Award, label: "Warranty", value: product.warranty },
-  { icon: CheckCircle, label: "Monitoring", value: product.monitoring },
-  { icon: Layers, label: "Compatibility", value: product.compatibility },
-  { icon: Globe, label: "Applications", value: product.applications },
-  { icon: Network, label: "On-Grid Systems", value: product.ongrid_systems },
-  { icon: Box, label: "Off-Grid Systems", value: product.Off_grid_systems },
-  { icon: CircuitBoard, label: "Hybrid Systems", value: product.hybrid_systems },
-  { icon: Globe, label: "Bespoke Battery Design", value: product.bespoke_battery_design },
-  { icon: Radio, label: "Wireless BMS", value: product.wireless_bms },
-  { icon: Car, label: "EV Charging Solutions", value: product.ev_charging_solutions },
-  { icon: Cpu, label: "Smart Tech Platforms", value: product.smart_tech_platforms },
-];
+
+  const specifications = [
+    { icon: Settings, label: "Mounting", value: product.mounting },
+    { icon: Battery, label: "Battery Type", value: product.battery_type },
+    { icon: Gauge, label: "Voltage & Capacity", value: product.voltage_capacity },
+    { icon: Shield, label: "Protection", value: product.protection },
+    { icon: Cpu, label: "Technology", value: product.technology },
+    { icon: Activity, label: "Current", value: product.current },
+    { icon: Timer, label: "Lifespan", value: product.lifespan },
+    { icon: Plug, label: "Charging", value: product.charging },
+    { icon: RefreshCcw, label: "Range", value: product.range },
+    { icon: Award, label: "Warranty", value: product.warranty },
+    { icon: CheckCircle, label: "Monitoring", value: product.monitoring },
+    { icon: Layers, label: "Compatibility", value: product.compatibility },
+    { icon: Globe, label: "Applications", value: product.applications },
+    { icon: Network, label: "On-Grid Systems", value: product.ongrid_systems },
+    { icon: Box, label: "Off-Grid Systems", value: product.Off_grid_systems },
+    { icon: CircuitBoard, label: "Hybrid Systems", value: product.hybrid_systems },
+    { icon: Globe, label: "Bespoke Battery Design", value: product.bespoke_battery_design },
+    { icon: Radio, label: "Wireless BMS", value: product.wireless_bms },
+    { icon: Car, label: "EV Charging Solutions", value: product.ev_charging_solutions },
+    { icon: Cpu, label: "Smart Tech Platforms", value: product.smart_tech_platforms },
+  ];
 
 
   return (
@@ -106,7 +106,7 @@ const specifications = [
         <div className="grid lg:grid-cols-2 gap-8 p-6">
           {/* Left Column - Image and Description */}
           <div className="space-y-6">
-            <div className="relative h-64 rounded-xl overflow-hidden">
+            <div className="relative sm:h-92 h-50 rounded-xl overflow-hidden">
               <Image
                 src={product.image || "/placeholder.svg"}
                 alt={product.title}
@@ -137,7 +137,7 @@ const specifications = [
                 <CardTitle className="text-white">Specifications</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid-cols-2 gap-4">
                   {specifications
                     .filter((spec) => spec.value && spec.value.trim() !== "")
                     .map((spec, index) => (
@@ -158,7 +158,7 @@ const specifications = [
             </Card>
 
             {/* Features */}
-            <Card className="bg-white/10 backdrop-blur-md border border-white/20">
+            <Card className="bg-white/10 backdrop-blur-md border border-white/20 sm:h-74">
               <CardHeader>
                 <CardTitle className="text-white">Key Features</CardTitle>
               </CardHeader>
@@ -172,28 +172,6 @@ const specifications = [
                       <span className="text-blue-200">{feature}</span>
                     </div>
                   ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Pricing */}
-            <Card className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-md border border-blue-400/30">
-              <CardContent className="p-6">
-                <div className="text-center space-y-4">
-                  <div className="flex items-center justify-center space-x-2">
-                    <Star className="h-5 w-5 text-yellow-400 fill-current" />
-                    <Star className="h-5 w-5 text-yellow-400 fill-current" />
-                    <Star className="h-5 w-5 text-yellow-400 fill-current" />
-                    <Star className="h-5 w-5 text-yellow-400 fill-current" />
-                    <Star className="h-5 w-5 text-yellow-400 fill-current" />
-                    <span className="text-blue-200 ml-2">(4.9/5 rating)</span>
-                  </div>
-                  <p className="text-white text-lg">
-                    Starting from <span className="text-2xl font-bold">$12,999</span>
-                  </p>
-                  <p className="text-blue-200 text-sm">
-                    *Price varies based on system size and installation requirements
-                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -213,6 +191,19 @@ const specifications = [
             </div> */}
           </div>
         </div>
+        {/* Pricing */}
+        <Card className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-md border border-blue-400/30 mx-6 mb-6">
+          <CardContent className="p-6">
+            <div className="text-center space-y-4">
+              <p className="text-white text-lg">
+                Starting from <span className="text-2xl font-bold">$12,999</span>
+              </p>
+              <p className="text-blue-200 text-sm">
+                *Price varies based on requirements
+              </p>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   )

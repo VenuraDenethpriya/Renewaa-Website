@@ -100,7 +100,7 @@ export default function ProjectDetail({ project, isOpen, onClose }: ProjectDetai
             <h2 className="text-3xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent mb-2">
               {project.title}
             </h2>
-            <div className="flex items-center space-x-4 text-blue-200">
+            <div className="sm:flex items-center space-x-4 text-blue-200">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
                 <span>{project.location}</span>
@@ -134,7 +134,7 @@ export default function ProjectDetail({ project, isOpen, onClose }: ProjectDetai
                 <CardTitle className="text-white">Project Overview</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="sm:grid grid-cols-2 gap-4">
                   {projectStats.filter((spec) => spec.value && spec.value.trim() !== "").map((stat, index) => (
                     <div key={index} className="flex items-center space-x-3 p-3 bg-blue-500/10 rounded-lg">
                       <stat.icon className="h-5 w-5 text-blue-400" />

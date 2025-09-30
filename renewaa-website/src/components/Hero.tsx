@@ -115,40 +115,6 @@ export default function Hero() {
 
       {/* Partners Section */}
       <Partners />
-
-      {/* Call to Action Banner */}
-      <div className="relative z-30 container mx-auto px-6 lg:px-12 pb-20">
-        <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl rounded-3xl border border-white/20 p-12 text-center shadow-2xl">
-          <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Transform Your Energy Future?</h3>
-          <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied customers who have made the switch to clean, renewable energy solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="#contact" passHref>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-500 hover:to-blue-700 text-lg px-8 py-6 shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300"
-              >
-                Get Free Consultation
-              </Button>
-            </Link>
-
-            <Link href="#portfolio" passHref>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-8 py-6 bg-white/10 backdrop-blur-xl border-2 border-blue-400/30 text-white hover:bg-white/20 hover:border-blue-300/50 transform hover:scale-105 transition-all duration-300"
-              >
-                View Our Portfolio
-              </Button>
-            </Link>
-
-          </div>
-        </div>
-      </div>
-
-
-
     </section>
   )
 }

@@ -26,7 +26,7 @@ export default function MobileNav() {
             size="icon"
             className="text-white hover:bg-white/10"
           >
-            <Menu className="h-6 w-6" />
+            <Menu className="h-10 w-10" />
           </Button>
         </SheetTrigger>
 

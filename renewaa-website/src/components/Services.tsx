@@ -65,7 +65,8 @@ export default function Services() {
                     {service.description}
                   </CardDescription>
 
-                  <div className="space-y-2">
+
+                  <div className="hidden sm:grid space-y-2">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>

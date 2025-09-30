@@ -1,8 +1,8 @@
 "use client";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
-import Image from "next/image";
 import { useState, useRef, useId, useEffect } from "react";
 import ProductDetail from "../Product-Detail";
+import Image from "next/image";
 
 interface SlideData {
   title: string;
@@ -108,6 +108,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
               loading="eager"
               decoding="sync"
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 to-transparent"></div>
             {current === index && (
               <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
             )}
