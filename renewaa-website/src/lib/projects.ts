@@ -78,7 +78,7 @@ export const projects = [
     },
     {
         title: "On Grid Solar Projects",
-        location: "Portland, OR",
+        location: "",
         capacity: "5kW+",
         image: "/projects/On Grid Solar Projects.jpg?height=300&width=500",
         description:
@@ -97,7 +97,7 @@ export const projects = [
     },
     {
         title: "Off Grid Solar Projects",
-        // location: "Fresno, CA",
+        location: "",
         capacity: "5kW+",
         image: "/projects/Off Grid Solar Projects.jpg?height=300&width=500",
         description: "Reliable solar independence for remote and rugged sites.",

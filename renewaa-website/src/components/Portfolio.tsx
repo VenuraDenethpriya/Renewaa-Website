@@ -68,8 +68,13 @@ export default function Portfolio() {
                                             {project.title}
                                         </h3>
                                         <div className="flex items-center space-x-2 text-blue-300 mb-3">
-                                            <MapPin className="h-4 w-4" />
-                                            <span className="text-sm">{project.location}</span>
+                                            {
+                                                project.location == "" ? null : <div className="flex gap-x-2 items-center">
+                                                    <MapPin className="h-4 w-4" />
+                                                    <span className="text-sm">{project.location}</span>
+                                                </div>
+                                            }
+
                                         </div>
                                         <p className="text-blue-200 text-sm leading-relaxed">{project.description}</p>
                                     </div>
@@ -87,7 +92,15 @@ export default function Portfolio() {
                                         ))}
                                     </div> */}
 
-                                    <Button
+                                    {
+                                        project.location == "" ? <Button
+                                        variant="ghost"
+                                        className=" mt-5 w-full text-blue-200 hover:text-white hover:bg-blue-600/20 border border-blue-400/30 hover:border-blue-300/50 group/btn"
+                                        onClick={() => setSelectedProject(project)}
+                                    >
+                                        View Details
+                                        <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                                    </Button> : <Button
                                         variant="ghost"
                                         className="w-full text-blue-200 hover:text-white hover:bg-blue-600/20 border border-blue-400/30 hover:border-blue-300/50 group/btn"
                                         onClick={() => setSelectedProject(project)}
@@ -95,6 +108,8 @@ export default function Portfolio() {
                                         View Details
                                         <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                                     </Button>
+                                    }
+                                    
                                 </CardContent>
                             </Card>
                         ))}
