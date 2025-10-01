@@ -3,7 +3,7 @@ export const projects = [
     {
         title: "Forklift Battery Conversion",
         location: "Ceylon Tobacco Company PLC",
-        // capacity: "1005kW",
+        capacity: "",
         image: "/projects/Forklift Battery Conversion.jpg?height=300&width=500",
         description: "Upgrading industrial forklifts for greener logistics.",
         year: "2020",

@@ -3,7 +3,7 @@ export const founders = [
     name: "Eranja Perera",
     position: "Director",
     team: "Mechanical Engineer",
-    image: "/placeholder.svg?height=200&width=200"
+    image: "/team/Eranja.png?height=200&width=200"
   },
   {
     name: "Avishka Jayakody",

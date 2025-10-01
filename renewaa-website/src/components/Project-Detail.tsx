@@ -2,19 +2,19 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { 
-  Zap,            
-  Calendar,       
-  MapPin,         
-  BatteryCharging, 
-  Wrench,         
-  Timer,           
-  Gauge,           
-  Leaf,            
-  Fuel,            
-  Cloud,           
-  PiggyBank,       
-  Tag,              
+import {
+  Zap,
+  Calendar,
+  MapPin,
+  BatteryCharging,
+  Wrench,
+  Timer,
+  Gauge,
+  Leaf,
+  Fuel,
+  Cloud,
+  PiggyBank,
+  Tag,
   X
 } from "lucide-react";
 import Image from "next/image";
@@ -55,20 +55,20 @@ export default function ProjectDetail({ project, isOpen, onClose }: ProjectDetai
   if (!isOpen) return null
 
   const projectStats = [
-  { icon: Zap, label: "System Capacity", value: project.capacity },
-  { icon: MapPin, label: "Client", value: project.client },
-  { icon: Calendar, label: "No of Conversions Done", value: project.NoofConversionsDone },
-  { icon: BatteryCharging, label: "Battery Lifespan", value: project.BatteryLifespan },
-  { icon: Wrench, label: "Maintenance", value: project.Maintenance },
-  { icon: Timer, label: "Charging Time", value: project.ChargingTime },
-  { icon: Timer, label: "Run Time", value: project.RunTime },
-  { icon: Gauge, label: "Range", value: project.Range },
-  { icon: Leaf, label: "Trees Equivalent", value: project.TreesEquivalent },
-  { icon: Fuel, label: "Saving on Fuel", value: project.SavingOnFuel },
-  { icon: Cloud, label: "CO₂ Reduction", value: project.co2Reduction },
-  { icon: PiggyBank, label: "Saving", value: project.savings },
-  { icon: Tag, label: "Category", value: project.category },
-];
+    { icon: Zap, label: "System Capacity", value: project.capacity },
+    { icon: MapPin, label: "Client", value: project.client },
+    { icon: Calendar, label: "No of Conversions Done", value: project.NoofConversionsDone },
+    { icon: BatteryCharging, label: "Battery Lifespan", value: project.BatteryLifespan },
+    { icon: Wrench, label: "Maintenance", value: project.Maintenance },
+    { icon: Timer, label: "Charging Time", value: project.ChargingTime },
+    { icon: Timer, label: "Run Time", value: project.RunTime },
+    { icon: Gauge, label: "Range", value: project.Range },
+    { icon: Leaf, label: "Trees Equivalent", value: project.TreesEquivalent },
+    { icon: Fuel, label: "Saving on Fuel", value: project.SavingOnFuel },
+    { icon: Cloud, label: "CO₂ Reduction", value: project.co2Reduction },
+    { icon: PiggyBank, label: "Saving", value: project.savings },
+    { icon: Tag, label: "Category", value: project.category },
+  ];
 
   // const projectPhases = [
   //   {
@@ -101,14 +101,21 @@ export default function ProjectDetail({ project, isOpen, onClose }: ProjectDetai
               {project.title}
             </h2>
             <div className="sm:flex items-center space-x-4 text-blue-200">
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4" />
-                <span>{project.location}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Zap className="h-4 w-4 text-yellow-400" />
-                <span>{project.capacity}</span>
-              </div>
+              {
+                project.location == "" ? null : <div className="flex items-center space-x-2">
+                  <MapPin className="h-4 w-4" />
+                  <span>{project.location}</span>
+                </div>
+              }
+
+              {
+                project.capacity == "" ? null : <div className="flex items-center space-x-2">
+                  <Zap className="h-4 w-4 text-yellow-400" />
+                  <span>{project.capacity}</span>
+                </div>
+              }
+
+
               <div className="flex items-center space-x-2">
                 <Calendar className="h-4 w-4" />
                 <span>Completed {project.year}</span>
@@ -181,15 +188,15 @@ export default function ProjectDetail({ project, isOpen, onClose }: ProjectDetai
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-4">
-                  <div className="p-4 bg-blue-500/10 rounded-lg">
-                    <div className="flex items-center space-x-3 mb-2">
-                      {/* <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                <div className="p-4 bg-blue-500/10 rounded-lg">
+                  <div className="flex items-center space-x-3 mb-2">
+                    {/* <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
                         
                       </div> */}
-                      <h4 className="text-white font-medium">{project.description2}</h4>
-                    </div>
-                    <p className="text-blue-200 text-sm"></p>
+                    <h4 className="text-white font-medium">{project.description2}</h4>
                   </div>
+                  <p className="text-blue-200 text-sm"></p>
+                </div>
               </div>
             </CardContent>
           </Card>

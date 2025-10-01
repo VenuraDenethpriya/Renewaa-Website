@@ -196,7 +196,7 @@ export default function ProductDetail({ product, isOpen, onClose }: ProductDetai
           <CardContent className="p-6">
             <div className="text-center space-y-4">
               <p className="text-white text-lg">
-                Starting from <span className="text-2xl font-bold">$12,999</span>
+                Starting from <span className="text-2xl font-bold"> LKR {product.price}</span>
               </p>
               <p className="text-blue-200 text-sm">
                 *Price varies based on requirements

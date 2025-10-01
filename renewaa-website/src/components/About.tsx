@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { stats, values } from "@/lib/about-us"
 import { CheckCircle } from "lucide-react"
@@ -171,7 +173,7 @@ export default function About() {
       </div>
 
       {/* Call to Action Banner */}
-      <div className="relative z-30 container mx-auto px-6 lg:px-12 lg:pt-28 pt-8">
+      {/* <div className="relative z-30 container mx-auto px-6 lg:px-12 lg:pt-28 pt-8">
         <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl rounded-3xl border border-white/20 p-12 text-center shadow-2xl">
           <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Transform Your Energy Future?</h3>
           <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
@@ -197,6 +199,20 @@ export default function About() {
               </Button>
             </Link>
 
+          </div>
+        </div>
+      </div> */}
+
+      <div className="relative z-30 container mx-auto px-6 lg:px-12 lg:pt-28 pt-8">
+        <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl rounded-3xl border border-white/20 p-12 text-center shadow-2xl">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-500 hover:to-blue-700 text-lg px-8 py-6 shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300"
+              onClick={() => window.open("tel:+94743020154")}
+            >
+              Call Us on +94 743 020 154
+            </Button>
           </div>
         </div>
       </div>

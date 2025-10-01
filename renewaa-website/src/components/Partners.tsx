@@ -5,19 +5,19 @@ import Image from "next/image"
 export default function Partners() {
   const partners = [
     { name: "CTC", logo: "/partners/CTC.png" },
-    { name: "DCSL LANKA", logo: "/partners/DCSL LANKA.png" },
-    { name: "DEEP TECH", logo: "/partners/DEEP TECH.png" },
+    { name: "DCSL LANKA", logo: "/partners/DCSL_LANKA.png" },
+    { name: "DEEP TECH", logo: "/partners/DEEP_TECH.png" },
     { name: "DESO", logo: "/partners/DESO.png" },
     { name: "FERENTINO", logo: "/partners/FERENTINO.png" },
-    { name: "FIRE x", logo: "/partners/FIRE x.png" },
-    { name: "Global GIS", logo: "/partners/Global GIS.png" },
+    { name: "FIRE x", logo: "/partners/FIRE_x.png" },
+    { name: "Global GIS", logo: "/partners/Global_GIS.png" },
     { name: "GRI", logo: "/partners/GRI.png" },
-    { name: "IDEAL LANKA", logo: "/partners/IDEAL LANKA.png" },
+    { name: "IDEAL LANKA", logo: "/partners/IDEAL_LANKA.png" },
     { name: "JITI", logo: "/partners/JITI.png" },
-    { name: "Laughfs", logo: "/partners/laughfs-.png" },
+    { name: "Laughfs", logo: "/partners/laughfs.png" },
     { name: "OREL", logo: "/partners/OREL.png" },
     { name: "PON", logo: "/partners/PON.png" },
-    { name: "ROYAL COLOMBO GOLF CLUB", logo: "/partners/ROYAL COLOMBO GOLF CLUB.png" },
+    { name: "ROYAL COLOMBO GOLF CLUB", logo: "/partners/ROYAL_COLOMBO_GOLF_CLUB.png" },
     { name: "Windforce", logo: "/partners/windforce.png" },
   ]
 

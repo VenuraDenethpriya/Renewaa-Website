@@ -18,6 +18,7 @@ export const services = [
     battery_type:"Advanced lithium - ion cells",
     voltage_capacity:"Wide range options available",
     protection:"Smart Battery Management System(BMS)",
+    price:""
   },
   {
     icon: Forklift,
@@ -37,6 +38,7 @@ export const services = [
     current: "High-current capability",
     lifespan: "Significantly longer than lead-acid",
     charging: "Fast charging support",
+    price:""
   },
   {
     icon: Bike,
@@ -55,6 +57,7 @@ export const services = [
     range: "Extended driving range per charge",
     warranty: "Backed by 100,000 km warranty",
     monitoring: "Smart performance tracking",
+    price:""
   },
   {
     icon: Car,
@@ -72,6 +75,7 @@ export const services = [
     technology: "High-quality, long-life lithium cell packs",
     compatibility: "Nissan Leaf, Mitsubishi Outlander PHEV, Mahindra E2O, and other supported EVs",
     applications: "Personal and fleet EVs seeking improved performance and reduced operating costs",
+    price:""
   },
   {
     icon: Sun,
@@ -90,6 +94,7 @@ export const services = [
     Off_grid_systems: "Standalone solar systems with in-house lithium battery storage, ideal for remote areas without reliable grid access.",
     hybrid_systems: "Combines on-grid and off-grid capabilities, providing backup power during outages while maximizing solar efficiency.",
     applications: "Residential, commercial, and industrial use.",
+    price:""
   },
   {
     icon: Building,
@@ -107,6 +112,7 @@ export const services = [
     bespoke_battery_design: "Custom-designed lithium battery packs tailored to specific energy needs, ensuring optimal performance and efficiency.",
     wireless_bms: "Advanced Wireless Battery Management Systems (Wi-BMS, Wi-75BMS) for seamless monitoring, safety, and real-time diagnostics without complex wiring.",
     ev_charging_solutions: "EV charger development supporting CCS2 & CHAdeMO standards, enabling fast and reliable charging for diverse electric vehicles.",
-    smart_tech_platforms: "Cloud-based workflow platforms with AI-driven monitoring and autonomous driving technology powered by deep learning for next-gen mobility solutions."
+    smart_tech_platforms: "Cloud-based workflow platforms with AI-driven monitoring and autonomous driving technology powered by deep learning for next-gen mobility solutions.",
+    price:""
   },
 ]

@@ -231,7 +231,7 @@ export default function Contact() {
                   <div className="w-14 h-14 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-2xl">
                     <MapPin className="h-7 w-7 text-white" />
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-6">
                     <div>
                       <h3 className="font-semibold text-white mb-2 text-lg">Visit Our Office</h3>
                       <p className="text-blue-200 leading-relaxed">
