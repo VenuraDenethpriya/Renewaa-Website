@@ -46,6 +46,8 @@ export default function Services() {
                   <Image
                     src={service.image || "/placeholder.svg"}
                     alt={service.title}
+                    height={300}
+                    width={400}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent"></div>

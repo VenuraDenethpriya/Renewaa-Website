@@ -4,7 +4,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { stats, values } from "@/lib/about-us"
 import { CheckCircle } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
 import { Button } from "./ui/button"
 
 export default function About() {

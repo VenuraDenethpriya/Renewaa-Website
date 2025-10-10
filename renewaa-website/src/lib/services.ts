@@ -57,7 +57,7 @@ export const services = [
     range: "Extended driving range per charge",
     warranty: "Backed by 100,000 km warranty",
     monitoring: "Smart performance tracking",
-    price:"Starting from LKR"
+    price:"Contact us for more details"
   },
   {
     icon: Car,
@@ -75,7 +75,7 @@ export const services = [
     technology: "High-quality, long-life lithium cell packs",
     compatibility: "Nissan Leaf, Mitsubishi Outlander PHEV, Mahindra E2O, and other supported EVs",
     applications: "Personal and fleet EVs seeking improved performance and reduced operating costs",
-    price:"Starting from LKR"
+    price:"Contact us for more details"
   },
   {
     icon: Sun,
@@ -113,6 +113,6 @@ export const services = [
     wireless_bms: "Advanced Wireless Battery Management Systems (Wi-BMS, Wi-75BMS) for seamless monitoring, safety, and real-time diagnostics without complex wiring.",
     ev_charging_solutions: "EV charger development supporting CCS2 & CHAdeMO standards, enabling fast and reliable charging for diverse electric vehicles.",
     smart_tech_platforms: "Cloud-based workflow platforms with AI-driven monitoring and autonomous driving technology powered by deep learning for next-gen mobility solutions.",
-    price:"Contact us to know more details"
+    price:"Contact us for more details"
   },
 ]

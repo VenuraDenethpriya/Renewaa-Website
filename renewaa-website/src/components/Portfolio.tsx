@@ -46,6 +46,8 @@ export default function Portfolio() {
                                     <Image
                                         src={project.image || "/placeholder.svg"}
                                         alt={project.title}
+                                        height={300}
+                                        width={500}
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent"></div>
@@ -94,22 +96,22 @@ export default function Portfolio() {
 
                                     {
                                         project.location == "" ? <Button
-                                        variant="ghost"
-                                        className=" mt-5 w-full text-blue-200 hover:text-white hover:bg-blue-600/20 border border-blue-400/30 hover:border-blue-300/50 group/btn"
-                                        onClick={() => setSelectedProject(project)}
-                                    >
-                                        View Details
-                                        <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                                    </Button> : <Button
-                                        variant="ghost"
-                                        className="w-full text-blue-200 hover:text-white hover:bg-blue-600/20 border border-blue-400/30 hover:border-blue-300/50 group/btn"
-                                        onClick={() => setSelectedProject(project)}
-                                    >
-                                        View Details
-                                        <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                                    </Button>
+                                            variant="ghost"
+                                            className=" mt-5 w-full text-blue-200 hover:text-white hover:bg-blue-600/20 border border-blue-400/30 hover:border-blue-300/50 group/btn"
+                                            onClick={() => setSelectedProject(project)}
+                                        >
+                                            View Details
+                                            <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                                        </Button> : <Button
+                                            variant="ghost"
+                                            className="w-full text-blue-200 hover:text-white hover:bg-blue-600/20 border border-blue-400/30 hover:border-blue-300/50 group/btn"
+                                            onClick={() => setSelectedProject(project)}
+                                        >
+                                            View Details
+                                            <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                                        </Button>
                                     }
-                                    
+
                                 </CardContent>
                             </Card>
                         ))}

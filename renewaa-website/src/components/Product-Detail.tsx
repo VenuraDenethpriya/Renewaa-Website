@@ -3,10 +3,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import {
-  Zap, Shield, Clock, Award, Battery, Settings, Cpu,
+  Shield, Award, Battery, Settings, Cpu,
   Activity, Gauge, Timer, Plug, RefreshCcw, CheckCircle,
   Layers, Box, Globe, Network, Radio, Car, CircuitBoard,
-  Star,
   Check,
   X
 } from "lucide-react";
@@ -151,7 +150,7 @@ export default function ProductDetail({ product, isOpen, onClose }: ProductDetai
                           <p className="text-white font-medium">{spec.value}</p>
                         </div>
                       </div>
-                    ))}
+                    ))} 
                 </div>
               </CardContent>
 

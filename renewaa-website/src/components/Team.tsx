@@ -43,11 +43,11 @@ export default function Team() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-md border border-blue-400/30 mb-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-md border border-blue-400/30 mb-6">
             <span className="text-blue-200 text-sm font-medium">🤝 Our Team</span>
           </div>
           <h2 className="text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent mb-6">
-             Meet Our Team
+            Meet Our Team
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Passionate professionals dedicated to bringing clean energy solutions to your doorstep
@@ -71,6 +71,8 @@ export default function Team() {
                       <Image
                         src={member.image || "C:\Renewaa Project\Website\renewaa-website\public\placeholder.jpeg"}
                         alt={member.name}
+                        height={200}
+                        width={200}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
@@ -124,6 +126,8 @@ export default function Team() {
                           <Image
                             src={member.image || "/placeholder.svg"}
                             alt={member.name}
+                            height={150}
+                            width={150}
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                           />
                         </div>
